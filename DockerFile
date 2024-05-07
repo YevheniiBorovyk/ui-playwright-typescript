@@ -1,0 +1,8 @@
+FROM mrc.microsoft.com/plawright:v1.42.1-jammy
+
+RUN mkdir /app
+WORKDIR /app
+COPY . /app/
+
+RUN npm install --froce
+RUN npx plawright install
